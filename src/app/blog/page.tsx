@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function BlogPage() {
   return (
-    <div className="py-12 bg-slate-50">
+    <div className="py-12 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-foreground">Latest Blog Posts</h1>
@@ -12,7 +12,7 @@ export default function BlogPage() {
             Explore our latest articles about web development and technology
           </p>
         </div>
-        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3 bg-slate-100">
+        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {blogPosts.map((post) => (
             <article
               key={post.id}
