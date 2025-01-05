@@ -20,7 +20,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     <article className="py-12 bg-slate-50">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-foreground">{post.title}</h1>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">{post.title}</h1>
           <div className="mt-4 text-muted-foreground">
             <span>{post.author}</span>
             <span className="mx-2">•</span>
@@ -33,10 +33,10 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             alt={post.title}
             width={800}
             height={400}
-            className="rounded-lg object-cover w-full h-[400px]"
+            className="rounded-lg object-cover w-full h-[200px] sm:h-[300px] md:h-[400px]"
           />
         </div>
-        <div className="mt-8 prose prose-blue max-w-none">
+        <div className="mt-8 text-base sm:text-lg md:text-2xl max-w-none">
           {post.content.split('\n\n').map((paragraph, index) => (
             <p key={index} className="text-foreground">
               {paragraph}
